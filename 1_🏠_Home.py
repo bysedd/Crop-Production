@@ -1,7 +1,11 @@
 import pandas as pd
 import streamlit as st
 
-st.set_page_config(page_title="Produção Agrícola", page_icon="👨‍🌾", layout="centered")
+st.set_page_config(
+    page_title="Produção Agrícola",
+    page_icon="👨‍🌾",
+    layout="centered",
+)
 
 st.title("🌾🌱 :green[Produção Agrícola] 🌽🍅")
 
@@ -35,7 +39,7 @@ st.markdown(
     
     ## Descrição
     
-    Dados da Organização das Nações Unidas para Agricultura e Alimentação (FAO)
+    Dados da Organização das Nações Unidas para Alimentação e Agricultura (FAO)
     
     As estatísticas de culturas abrangem diversas categorias de produtos agrícolas, totalizando 173 itens. Entre 
     essas categorias estão as Culturas Primárias, Culturas de Fibra Primárias, Cereais, Grãos Grossos, 
@@ -46,7 +50,4 @@ st.markdown(
     """
 )
 
-menu_options = ["Página inicial", "Informações do continente"]
-choice = st.sidebar.selectbox("Menu", menu_options)
-
-st.sidebar.caption("Made with ❤️ by [Felippe A.]")
+st.sidebar.caption("Made with ❤️ by [Felippe A.](https://www.github.com/bysedd)")
