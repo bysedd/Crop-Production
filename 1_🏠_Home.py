@@ -1,11 +1,7 @@
 import pandas as pd
 import streamlit as st
 
-st.set_page_config(
-    page_title="Produção Agrícola",
-    page_icon="👨‍🌾",
-    layout="centered",
-)
+st.set_page_config(page_title="Produção Agrícola", page_icon="👨‍🌾", layout="centered")
 
 st.title("🌾🌱 :green[Produção Agrícola] 🌽🍅")
 
