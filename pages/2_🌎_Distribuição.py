@@ -109,7 +109,7 @@ def plot_maps(data_frame: pd.DataFrame) -> None:
             color_continuous_scale=px.colors.sequential.Plasma_r,
             hover_data=[ano],
             labels={ano: "Quantidade"},
-            title=f"Produção de '{item}' em {ano}",
+            title=item,
             range_color=[0, filtered_df[ano].max()],
         )
         # fig.update_geos(visible=False)  # Hide countries without data
