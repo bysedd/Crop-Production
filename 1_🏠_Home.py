@@ -11,7 +11,6 @@ def load_data(*, file_csv: str) -> None:
     """
     Load and return the data from a CSV file.
     :param file_csv: The filename of the CSV file.
-    :return: A pandas DataFrame containing the data from the CSV file.
     """
     data = pd.read_csv(file_csv, index_col=0)
     st.session_state["df"] = data
