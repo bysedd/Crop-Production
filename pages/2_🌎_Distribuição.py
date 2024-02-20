@@ -138,7 +138,7 @@ def main() -> None:
         filter_df = aplicar_filtros(filter_df)
         plot_maps(filter_df)
     except KeyError:
-        st.write("Go to **home page** first")
+        st.error("Please go to the **🏠 Home** page first. Then back to this page.")
 
 
 if __name__ == "__main__":
