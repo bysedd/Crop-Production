@@ -131,13 +131,13 @@ def plot_maps(data_frame: pd.DataFrame) -> None:
 
 
 def main() -> None:
-    try:
-        filter_df = st.session_state["df"].copy()
-        filter_df = aplicar_filtros(filter_df)
-        plot_maps(filter_df)
-    except KeyError:
-        st.error("Please go to the **🏠 Home** page first. Then back to this page.")
+    filter_df = st.session_state["df"].copy()
+    filter_df = aplicar_filtros(filter_df)
+    plot_maps(filter_df)
 
 
 if __name__ == "__main__":
-    main()
+    try:
+        main()
+    except KeyError:
+        st.error("Please go to the **🏠 Home** first. Then back to this page.")
