@@ -7,13 +7,13 @@ st.title("🌾🌱 :green[Produção Agrícola] 🌽🍅")
 
 
 @st.cache_data
-def load_data(*, file_csv: str) -> None:
+def load_data(*, file_csv: str) -> pd.DataFrame:
     """
     Load and return the data from a CSV file.
     :param file_csv: The filename of the CSV file.
     """
     data = pd.read_csv(file_csv, index_col=0)
-    st.session_state["df"] = data
+    return data
 
 
 st.markdown(
@@ -42,5 +42,5 @@ st.markdown(
     """
 )
 
-load_data(file_csv="data/Production_Crops_E_World.csv")
+st.session_state["df"] = load_data(file_csv="data/Production_Crops_E_World.csv")
 st.sidebar.caption("Made with ❤️ by [Felippe A.](https://www.github.com/bysedd)")
