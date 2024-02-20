@@ -108,9 +108,7 @@ def plot_maps(data_frame: pd.DataFrame) -> None:
 
     for item in items:
         filtered_df = data_frame[(data_frame["Item"] == item) & (data_frame[ano] > 1)]
-        filtered_df = (
-            filtered_df.groupby("Alpha 3")[ano].sum().reset_index()
-        )  # Adicione esta linha
+        filtered_df = filtered_df.groupby("Alpha 3")[ano].sum().reset_index()
         fig = px.choropleth(
             filtered_df[[ano, "Alpha 3"]],
             locations="Alpha 3",
